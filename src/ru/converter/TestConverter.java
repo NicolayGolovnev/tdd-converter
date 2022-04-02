@@ -18,6 +18,6 @@ public class TestConverter {
 
     @Test
     public void converterCheckAllUnits() {
-        assertEquals(3, converter.getUnits().size());
+        assertEquals(2, converter.getUnits().size());
     }
 }
