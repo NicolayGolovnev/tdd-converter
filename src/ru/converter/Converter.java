@@ -52,4 +52,40 @@ public class Converter {
         else
             throw new RuntimeException("System doesn't exist for toSystem parameter");
     }
+
+    public double getWeightFromAmerican(int toSystem, double value) {
+        if (toSystem == 1)
+            return value;
+
+        if (toSystem == 2)
+            return value / 36.11278;
+        else if (toSystem == 3)
+            return value / 0.4536;
+        else
+            throw new RuntimeException("System doesn't exist for toSystem parameter");
+    }
+
+    public double getWeightFromRussian(int toSystem, double value) {
+        if (toSystem == 2)
+            return value;
+
+        if (toSystem == 1)
+            return value * 36.11278;
+        else if (toSystem == 3)
+            return value * 16.38;
+        else
+            throw new RuntimeException("System doesn't exist for toSystem parameter");
+    }
+
+    public double getWeightFromInternational(int toSystem, double value) {
+        if (toSystem == 3)
+            return value;
+
+        if (toSystem == 1)
+            return value / 0.4536;
+        else if (toSystem == 2)
+            return value / 16.38;
+        else
+            throw new RuntimeException("System doesn't exist for toSystem parameter");
+    }
 }
